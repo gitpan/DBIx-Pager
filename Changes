@@ -1,4 +1,13 @@
+$Id: Changes,v 1.2 2002/08/06 02:06:14 ikechin Exp $
 Revision history for Perl extension DBIx::Pager
 
-0.01  Mon Aug  5 17:17:51 2002
-	- original version
+2002-08-06  IKEBE Tomohiro  <ikebe@edge.co.jp>
+
+	* 0.02
+	* fixed calculation of current_page
+	* added Class::Accessor to PREREQ_PM
+
+2002-08-05  IKEBE Tomohiro  <ikebe@edge.co.jp>
+
+	* 0.01
+	* original version

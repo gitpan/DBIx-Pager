@@ -1,5 +1,5 @@
 package DBIx::Pager;
-
+# $Id: Pager.pm,v 1.2 2002/08/06 02:06:14 ikechin Exp $
 use strict;
 use Carp;
 use vars qw($VERSION);
@@ -8,7 +8,7 @@ use POSIX ();
 
 __PACKAGE__->mk_accessors(qw(total limit offset));
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -89,8 +89,7 @@ sub page_count {
 
 sub current_page {
     my $self = shift;
-    return 1 unless $self->{offset};
-    return POSIX::ceil($self->{offset} + $self->{limit} / $self->{offset});
+    return int($self->{offset} / $self->{limit}) + 1;
 }
 
 1;
